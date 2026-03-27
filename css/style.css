@@ -116,6 +116,11 @@ input.touched:valid ~ span::after {
 div {
   position: relative;
 }
+nav {
+    display: inline-block;
+    list-style-type: none;
+  align-content: center;
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
