@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org",
+  "$id": "fueatmorefiber.com",
+  "title": "Recipe",
+  "description": "One singular recipe in the cookbook.",
+  "type": "object",
+  "properties":
+  {
+    "recipe_id": {
+      "description":"The unique identifier for a recipe",
+      "type": "integer"
+    },
+    "recipe_name": {
+      "description": "Name of the recipe",
+      "type": "string"
+    },
+    "recipe_category": {
+      "description": "The category of the recipe—for example, appetizer, entree, etc. ",
+      "type": "array"
+    },
+    "recipe_yield": {
+      "description": "How many servings will this make?",
+      "type": "integer"
+    },
+    "recipe_cuisine": {
+      "description": "The cuisine of the recipe (for example, French or Ethiopian). ",
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "recipe_ingredient": {
+      "type": "array",
+      "food": {
+        "type": "object",
+        "properties":{
+          "name": {
+            "type": "string",
+            "description": "Name of ingredient"
+          },
+          "amount":{
+            "type": "number",
+            "description": "A numeric qty"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          }
+
+        }
+      }
+    },
+    "recipe_instructions": {
+      "description": "A step in the process",
+      "properties": {
+        "stepNumber": { "type": "integer" },
+        "text": { "type": "string" }
+
+      },
+        "required": ["stepNumber", "text"],
+      "recipe_tips": {
+        "description": "A helpful tip for the reader",
+        "properties": {
+          "stepNumber": {
+            "type": "integer"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "stepNumber",
+          "text"
+        ]
+      }
+    }
+  },
+  "required": ["recipe_name", "recipe_ingredient","recipe_instructions"]
+}
