@@ -18,6 +18,10 @@
       "description": "The category of the recipe—for example, appetizer, entree, etc. ",
       "type": "array"
     },
+    "recipe_description": {
+      "description": "A word or two from the chef.",
+      "type": "string"
+    },
     "recipe_yield": {
       "description": "How many servings will this make?",
       "type": "integer"
@@ -28,26 +32,25 @@
       "items": {"type": "string"}
     },
     "recipe_ingredient": {
-      "type": "array",
-      "food": {
-        "type": "object",
-        "properties":{
-          "name": {
-            "type": "string",
-            "description": "Name of ingredient"
-          },
-          "amount":{
-            "type": "number",
-            "description": "A numeric qty"
-          },
-          "unit": {
-            "type": "string",
-            "description": "Unit of measurement"
-          }
-
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of ingredient"
+        },
+        "amount": {
+          "type": "number",
+          "description": "A numeric quantity"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement"
         }
-      }
-    },
+      },
+      "required": ["name"]    },
+
     "recipe_instructions": {
       "description": "A step in the process",
       "properties": {
@@ -74,4 +77,4 @@
     }
   },
   "required": ["recipe_name", "recipe_ingredient","recipe_instructions"]
-}
+}}

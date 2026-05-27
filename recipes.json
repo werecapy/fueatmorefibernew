@@ -1,0 +1,24 @@
+{
+  "recipe_id": "6a14c6d10b9644624140050b",
+  "recipe_name": "Baby Pea Sauce",
+  "recipe_category": ["sauce"],
+  "recipe_description": "A fairly simple dish for anyone who has a can of baby peas. Made this while mucking around the kitchen.",
+  "recipe_ingredient": [
+    {"name": "Baby Peas", "amount": 1, "unit": "can"},
+    {"name": "Butter","amount": 2 , "unit": "Tbsp"},
+    {
+      "name": "Heavy Whipped Cream",
+      "amount": 3,
+      "unit": "Tbsp"
+    },
+    {"name":  "Any kind of broth bullion or concentrate", "amount": 1,"unit": "tsp" },
+    {"name": "Pepper"},
+    {
+      "name": "salt"
+    }
+  ],
+  "recipe_yield": 4,
+  "recipe_instructions":
+    [
+      {}
+    ]}
